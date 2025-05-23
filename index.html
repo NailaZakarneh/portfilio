@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Naila's Portfolio</title>
+
+  <!-- Font Awesome (لأيقونات الروابط) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS CSS  لحتى استدعي المكتبة-->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #f8cde3;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #dd9da6;
+    }
+
+    section {
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px 20px;
+    }
+
+    section > * {
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+
+    .naila {
+      background-image: url('assets/pic.jpg');
+      flex-direction: row;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .naila img {
+      width: 350px;
+      height: auto;
+      border-radius: 20px;
+      border: 4px solid white;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .naila img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px 5px #e7b0c7;
+    }
+
+    .naila h1 {
+      font-size: 2.5rem;
+      max-width: 500px;
+      color: #e7c2c2;
+    }
+
+    .about {
+      background-image: url('assets/pic4.jpg');
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .about h1 {
+      max-width: 600px;
+      color: #fff;
+    }
+
+    .about img {
+      width: 250px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .about img:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 0 20px 5px #e8afd7;
+    }
+
+    .projects {
+      background-image: url('assets/pic4.jpg');
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .projects h2 {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    .projects .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .projects .project-item {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      width: 280px;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .projects .project-item a {
+      color: #e9a3be;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .projects .project-item a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .contacts {
+      background-image: url('assets/pic3.jpg');
+    }
+
+    .contacts h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+
+    .social-icons a {
+      color: white;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #eeb3d2;
+      transform: scale(1.2);
+    }
+
+    footer {
+      background-color: #f8cde3;
+      color: #333;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 1rem;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contacts">Contact</a>
+  </nav>
+
+  <section class="naila" id="home">
+    <img src="assets/me5.jpg" alt="me" data-aos="zoom-in" data-aos-duration="1000" />
+    <h1 data-aos="fade-left" data-aos-delay="300">Turning ideas into reality. Welcome to my digital portfolio! </h1>
+  </section>
+
+  <section class="about" id="about">
+    <h1 data-aos="fade-right" data-aos-delay="300">Hello! My name is Naila Zakarnah, and I am a student in the Computer Systems Engineering program at AAUP. I am passionate about technology and always eager to learn and explore new things in this field. I love coffee.</h1>
+    <img src="assets/me2.jpg" alt="image1" data-aos="fade-right" />
+    <img src="assets/me4.jpg" alt="image2" data-aos="fade-left" />
+  </section>
+
+  <section class="projects" id="projects">
+    <h2 data-aos="zoom-in">My Projects</h2>
+    <div class="project-list">
+      <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+        <a href=" https://nailazakarneh.github.io/freelancerweb/" target="_blank">Project One</a>
+        <p>A  freelancer progect based on bootstrap.</p>
+      </div>
+      <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://nailazakarneh.github.io/figma/" target="_blank">Project Two</a>
+        <p>A Figma project.</p>
+      </div>
+      <div class="project-item" data-aos="fade-up" data-aos-delay="300">
+        <a href="https://nailazakarneh.github.io/progect-/" target="_blank">Project three</a>
+        <p>My first ever project builed with HTML and simple CSS.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts" id="contacts">
+    <h2 data-aos="zoom-in-up">Let's Connect!</h2>
+    <div class="social-icons" data-aos="fade-up" data-aos-delay="200">
+      <a href="Gmail:n23zak@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/naila-zakarneh-29b293332/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/NailaZakarneh" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/nailazak/?igsh=MXIzd2E2ZGlscTI2YQ%3D%3D&utm_source=qr#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Naila. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
+
+
